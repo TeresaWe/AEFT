@@ -1,0 +1,10 @@
+load("~/files/Workspaces/NavonRT2607.RData")
+VPnames<-rownames(allresults)
+source('~/AEFT/AEFT_Functions29.09.R')
+source('~/AEFT/readloopAEFT.R')
+source('~/AEFT/AEFT_loop29.09function.R')
+source('~/AEFT/SDT_measures.R')
+index<-match(x=VPnames, table=rownames(AEFTresults))
+AEFTresults<-rbind(AEFTresults[index,])
+source('~/files/Publication AEFT/AEFT_Functions_RT.R')
+
